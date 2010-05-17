@@ -1,0 +1,12 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="${%Node}">
+    <select class="setting-input"  name="labelName">
+      <j:forEach var="s" items="${app.labels}">
+        <j:if test="${s.isAssignable()}">
+          <f:option selected="${s.name==instance.labelName}" value="${s.name}"
+            >${s.name} <j:if test="${!empty(s.description)}">(${s.description})</j:if></f:option>
+        </j:if>
+      </j:forEach>
+    </select>
+  </f:entry>
+</j:jelly>
