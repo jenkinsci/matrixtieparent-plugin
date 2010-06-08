@@ -9,7 +9,7 @@
 
   <artifactId>matrixtieparent</artifactId>
   <packaging>hpi</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Matrix Tie Parent plugin</name>
   <description>Tie execution of Matrix parent build to a Label</description>
   <url>http://wiki.hudson-ci.org/display/HUDSON/Matrix+Tie+Parent+Plugin</url>
@@ -35,5 +35,11 @@
       <url>http://maven.glassfish.org/content/groups/public/</url>
     </pluginRepository>
   </pluginRepositories>
+
+  <scm>
+    <connection>scm:svn:https://guest@svn.dev.java.net/svn/hudson/tags/matrixtieparent-1.0</connection>
+    <developerConnection>scm:svn:https://svn.dev.java.net/svn/hudson/tags/matrixtieparent-1.0</developerConnection>
+    <url>https://hudson.dev.java.net/source/browse/hudson/tags/matrixtieparent-1.0</url>
+  </scm>
 </project>
 
