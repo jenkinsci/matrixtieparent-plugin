@@ -8,6 +8,7 @@ import java.util.List;
 import java.io.IOException;
 import hudson.matrix.MatrixProject;
 import hudson.model.Label;
+import hudson.model.labels.LabelAtom;
 import hudson.tasks.BuildWrapper;
 
 /**
@@ -26,7 +27,7 @@ public class QueueDecisionHandlerMtp extends QueueDecisionHandler {
             for (BuildWrapper bw : projectParent.getBuildWrappers().values()) {
                 if (bw instanceof BuildWrapperMtp) {
                     BuildWrapperMtp bwMtp = (BuildWrapperMtp)bw;
-                    Label labelMtp = new Label(bwMtp.getLabelName());
+                    Label labelMtp = new LabelAtom(bwMtp.getLabelName());
 
                     try {
                         projectParent.setAssignedLabel(labelMtp);
