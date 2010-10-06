@@ -3,7 +3,6 @@ package matrixtieparent;
 import hudson.Extension;
 import hudson.Launcher;
 import hudson.model.AbstractProject;
-import hudson.model.Descriptor;
 import hudson.tasks.BuildWrapper;
 import hudson.tasks.BuildWrapperDescriptor;
 import hudson.model.AbstractBuild;
@@ -45,19 +44,8 @@ public class BuildWrapperMtp extends BuildWrapper {
         };
     }
 
-    @Override
-    public Descriptor<BuildWrapper> getDescriptor() {
-        return DESCRIPTOR;
-    }
-
     @Extension
-    public static final DescriptorImpl DESCRIPTOR = new DescriptorImpl();
-
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
-        DescriptorImpl() {
-            super(BuildWrapperMtp.class);
-        }
-
         public String getDisplayName() {
             return Messages.Descriptor_DisplayName();
         }
